@@ -8,7 +8,7 @@ st.header("Contact Us")
 
 with st.form(key="email_form"):
     user_email = st.text_input("Your e-mail address")
-    topics = st.selectbox("What topic do you want to discuss", options=topics_df)
+    topics = st.selectbox("What topic do you want to discuss", options=topics_df['topic'])
     raw_message = st.text_area("Message")
     message = f"""\
 Subject: New email from {user_email}
